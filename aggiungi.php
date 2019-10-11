@@ -18,10 +18,11 @@
 
 	$tipo = $_POST["tipo"];
 	$new_piatti = $_POST["new_piatti"];
+
 	$query = "INSERT INTO $tipo (nome) VALUES ('$new_piatti')";
 	if(mysqli_query($conn, $query)){
-    	echo "Piatto inserito.";
-	}else{
+    echo "Piatto inserito";
+	} else{
 	    echo "Errore";
 	}
 
