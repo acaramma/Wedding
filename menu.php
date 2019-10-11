@@ -66,14 +66,20 @@
 	$val_tab_primo = "INSERT INTO primo (id, nome)
 	VALUES (3, Spaghetti allo scoglio);"
 	$conn->query($val_tab_primo);*/
+	$q_primo = "SELECT menu.nome_menu, primo.nome FROM primo INNER JOIN menu ON primo.id = menu.id_primo WHERE menu.nome_menu = '$menu'";
+	$ris_primo = $conn->query($q_primo);
+	$array_primo = $ris_primo->fetch_array(MYSQLI_ASSOC);	
+	foreach ($array_primo as $primo)
 
-	
-	
-	$result = $conn->query($query);
-	$array_menu = $result->fetch_array(MYSQLI_ASSOC);
-	foreach ($array_menu as $menus)
-		console_log($menus);
-	
+	$q_secondo = "SELECT menu.nome_menu, secondo.nome FROM secondo INNER JOIN menu ON secondo.id = menu.id_secondo WHERE menu.nome_menu = '$menu'";
+	$ris_secondo = $conn->query($q_secondo);
+	$array_secondo = $ris_secondo->fetch_array(MYSQLI_ASSOC);	
+	foreach ($array_secondo as $secondo)
+
+	$q_dessert = "SELECT menu.nome_menu, dessert.nome FROM dessert INNER JOIN menu ON dessert.id = menu.id_dessert WHERE menu.nome_menu = '$menu'";
+	$ris_dessert = $conn->query($q_dessert);
+	$array_dessert = $ris_dessert->fetch_array(MYSQLI_ASSOC);	
+	foreach ($array_dessert as $dessert)
 ?>
 <!DOCTYPE html>
 <html>
@@ -82,6 +88,9 @@
 </head>
 <body>
 <div class="menu">
-		<?php echo $menus ?>
+	<?php echo $primo; ?><br>
+	<?php echo $secondo; ?><br>
+	<?php echo $dessert; ?><br>
+</div>
 </body>
 </html>

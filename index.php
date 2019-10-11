@@ -9,8 +9,8 @@
 		<span>Seleziona il menù</span><br>
 		<input type="radio" name="menu" value="terra">Terra<br>
 		<input type="radio" name="menu" value="mare">Mare<br>
-		<input type="radio" name="menu" value="linea">Linea<br>
-		<span>Clicca per visualizzare i menù</span>
+		<input type="radio" name="menu" value="linea">Linea<br><br>
+		<span>Clicca per visualizzare i menù:</span><br><br>
 		<input type="submit" name="Invio">
 	</form>
 	</div>
