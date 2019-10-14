@@ -5,11 +5,8 @@
 <body>
 	<div id="container">
 		<form method="post" action="menu.php">
-			<span>Seleziona il menù</span><br>
-			<input type="radio" name="menu" value="terra">Terra<br>
-			<input type="radio" name="menu" value="mare">Mare<br>
-			<input type="radio" name="menu" value="linea">Linea<br><br>
-			<span>Conferma per visualizzare il menu: </span>
+			<span>Inserisci il nome del menu: </span>
+			<input type="text" name="menu">
 			<input type="submit" name="Invio">
 		</form>
 
@@ -18,15 +15,13 @@
 			<input type="radio" name="tipo" value="primo">Primo<br>
 			<input type="radio" name="tipo" value="secondo">Secondo<br>
 			<input type="radio" name="tipo" value="dessert">Dessert<br><br>
-			<span>Aggiungi nuovi piatti:</span><br><br>
+			<span>Aggiungi nuovi piatti:</span>
 			<input type="text" name="new_piatti">
 			<input type="submit" name="Invio">
 		</form>	
 
 		<form method="post" action="aggiungi_menu.php">
-		<br><span>Per inserire un nuovo menu: </span><br><br>
-		<span>Inserisci il nome del menu: </span>
-		
+		<br><span>Per inserire un nuovo menu: </span>
 			<input type="submit" name="Invio">
 		</form>
 	</div>
